@@ -1,5 +1,8 @@
 const form = document.querySelector(".login-form");
-console.log(form);
+const data = {
+    email: '',
+    password: ''
+};
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const {
@@ -10,6 +13,8 @@ form.addEventListener('submit', (e) => {
         return alert('All fields are required!');
     }
 
-    console.log(`Email: ${email.value}, Password: ${password.value}.`);
+    data.email = email.value;
+    data.password = password.value;
+    console.log(data);
     e.currentTarget.reset();
 });

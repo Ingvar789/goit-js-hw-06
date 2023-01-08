@@ -8,9 +8,9 @@ const ingredients = [
 ];
 
 const ingredientContainer = document.getElementById('ingredients');
-
+let li = '';
 for (let ingredient of ingredients) {
-  const li = document.createElement("li");
-  li.textContent = ingredient;
-  ingredientContainer.append(li);
+  li += `<li>${ingredient}</li>`;
 }
+console.log(li);
+ingredientContainer.insertAdjacentHTML("afterbegin", li);
